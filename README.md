@@ -1,4 +1,4 @@
-# Clue Chaos - A Thrilling Social Deduction Game
+# Clue Chaos
 
 Welcome to the **Clue Chaos** project repository! This game was developed as a fun and engaging social deduction experience, where players must use their wit and observation skills to identify the undercover and Mr. White.
 
