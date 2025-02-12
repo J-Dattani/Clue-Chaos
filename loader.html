@@ -1,0 +1,87 @@
+<div class="loader-container">
+    <img class="loader-image" src="./cluechaos.png" alt="Image Below Loader">
+    <div class="loader"></div>
+</div>
+
+<!-- CSS for loader -->
+<style>
+/* Reset default margins and paddings */
+html, body {
+  margin: 0; /* Removes any default margins */
+  padding: 0; /* Removes any default padding */
+  height: 100%; /* Ensures the body and html span the full viewport height */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container styles for centering content */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;    /* Center content horizontally */
+  position: fixed; /* Ensures the loader covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  z-index: 9999;
+  background: rgba(47, 47, 47, 0.6); /* Semi-transparent dark overlay */
+  backdrop-filter: blur(1px); /* Optional: Adds a slight blur to the background */
+  box-sizing: border-box; /* Prevent padding/borders from affecting layout */
+}
+
+
+  /* Loader styles */
+  .loader {
+    display: block;
+    --height-of-loader: 4px;
+    --loader-color: #0071e2;
+    width: 130px;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 20px; /* Space between image and loader */
+  }
+
+  .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+  }
+
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
+
+  /* Image styles */
+  .loader-image {
+    max-width: 80%;   /* Ensures the image is responsive */
+    max-height: 60%;  /* Maintains aspect ratio within bounds */
+    object-fit: contain; /* Ensures image is contained properly */
+  }
+
+  /* For small screens (mobile responsiveness) */
+  @media screen and (max-width: 768px) {
+    .loader {
+      width: 100px; /* Adjust loader size for smaller screens */
+    }
+    .loader-image {
+      max-width: 70%; /* Slightly smaller image on mobile */
+    }
+  }
+</style>
