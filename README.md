@@ -34,7 +34,7 @@ Welcome to the **Clue Chaos** project repository! This game was developed as a f
 ## How to Run Locally  
 1. Clone the repository:
    ```bash
-   git clone https://github.com/J-Dattani/Clue_Chaos/
+   git clone https://github.com/J-Dattani/Clue-Chaos
    ```
 2. Navigate to the project directory:
    ```bash
